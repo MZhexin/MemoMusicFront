@@ -1,5 +1,5 @@
 {
-  "baseUrl": "https://test1yko3l3v7u4xaxdwuj1.workbenchapi.com",
+  "baseUrl": "back.memomusic.cn",
   "pollLimit": 20,
   "gatewayEPs": {
     "reportEP": "/report"
