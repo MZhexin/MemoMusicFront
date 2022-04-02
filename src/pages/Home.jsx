@@ -6,6 +6,7 @@ import MP3 from './MP3.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Button} from 'react-bootstrap';
 import "../css/home.css";
+import axios from 'axios';
 
 class Home extends Component {
   constructor(props) {
@@ -89,7 +90,7 @@ class Home extends Component {
           this.setState({url: response.data.murl});
           this.setState({mid: response.data.mid});
           this.setState({step: this.state.step + 1});
-          const payload = { "musicIndex": 35 };
+          const payload = { "musicIndex": this.state.mid };
           axios.post('http://101.200.125.86:5001/ClassicalMusic', payload)
           .then(response => {
           this.setState({ url: response.data.url});
