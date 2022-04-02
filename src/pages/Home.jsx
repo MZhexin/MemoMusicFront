@@ -87,9 +87,9 @@ class Home extends Component {
       .then(response => {
         //console.log(response);
         if (response !== undefined){
-          this.setState({url: response.data.murl});
+          
           this.setState({mid: response.data.mid});
-          this.setState({step: this.state.step + 1});
+          
           const payload = { "musicIndex": this.state.mid };
           var posturl = 'http://101.200.125.86:5001/ClassicalMusic';
           console.log('home.js utype');
@@ -106,6 +106,7 @@ class Home extends Component {
           .then(response => {
           this.setState({ url: response.data.url});
           console.log(response.data.url);
+          this.setState({step: this.state.step + 1});
           console.log('###ABC###'); 
     });
         }else{
@@ -120,9 +121,9 @@ class Home extends Component {
       .then(response => {
         //console.log(response);
         if (response !== undefined){
-          this.setState({url: response.data.murl});
+          
           this.setState({mid: response.data.mid});
-          this.setState({step: this.state.step + 1});
+          
           const payload = { "musicIndex": this.state.mid };
           var posturl = 'http://101.200.125.86:5001/ClassicalMusic';
           console.log('home.js utype');
@@ -139,6 +140,7 @@ class Home extends Component {
           .then(response => {
           this.setState({ url: response.data.url});
           console.log(response.data.url);
+          this.setState({step: this.state.step + 1});
           console.log('###ABC###'); 
           });
         }else{
