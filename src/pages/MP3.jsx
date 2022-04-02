@@ -4,6 +4,7 @@ import "../css/common.css";
 import CD from '../imgs/cd-clipart.png';
 import {InputGroup, FormControl} from 'react-bootstrap';
 import "../css/va.css";
+import MidiPlayer from 'react-midi-player';
 
 class MP3 extends Component {
   constructor(props) {
@@ -21,7 +22,8 @@ class MP3 extends Component {
 
   componentDidMount() {
     var w = this.props.width;
-    //console.log(this.props.url);
+    console.log('mp3.url=');
+    console.log(this.props.url);
     if (w < 800) {
       this.setState({imgWidth: w});
     }
@@ -89,12 +91,9 @@ class MP3 extends Component {
     return (
       <div>
         <img src={CD} width={this.state.imgWidth - 40} alt="a black CD"/>
-        <audio controls autoPlay onEnded={()=> this.props.audioEnd(this.state.writingComment)}>
-          <source src={this.props.url} type="audio/mpeg" />
-          Your browser does not support the <code>audio</code> element.
-        </audio>
+        
         <br />
-
+            <MidiPlayer src={this.props.url}/>
         <br />
         <InputGroup variant="dark">
           <InputGroup.Prepend>
@@ -109,7 +108,7 @@ class MP3 extends Component {
             <br />
             <br />
             <p>如果音乐无法正常加载，您可以点击<a href={this.props.url} target="_blank" rel="noopener noreferrer">此处</a>获取音源</p>
-            <p>并在听完后点击<a onClick={()=> this.props.audioEnd(this.state.writingComment)} style={{"color": "blue"}}>此处</a>进入下一环节</p>
+            <p>请在听完后点击<a onClick={()=> this.props.audioEnd(this.state.writingComment)} style={{"color": "blue"}}>此处</a>进入下一环节</p>
           </div>
         }
         {this.state.writingComment && this.state.status === 0 &&
