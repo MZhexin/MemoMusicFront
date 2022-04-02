@@ -29,10 +29,10 @@ class Login extends Component {
         else if (response !== undefined){
           //console.log(response.data.start_date);
           if (response.data.music_num === 0) {
-            handleLogIn(name, response.data.u_id, response.data.exp_num + 1,  response.data.music_num, response.data.v, response.data.a, response.data.start_date, "", "", "");
+            handleLogIn(name, response.data.u_id, response.data.exp_num + 1,  response.data.music_num, response.data.utype, response.data.v, response.data.a, response.data.start_date, "", "", "");
           }
           else{
-            handleLogIn(name, response.data.u_id, response.data.exp_num,  response.data.music_num, response.data.v, response.data.a, response.data.start_date, response.data.mname, response.data.mid, response.data.murl);
+            handleLogIn(name, response.data.u_id, response.data.exp_num,  response.data.music_num, response.data.utype, response.data.v, response.data.a, response.data.start_date, response.data.mname, response.data.mid, response.data.murl);
           }
 
           //console.log(this.state.loggedIn);
