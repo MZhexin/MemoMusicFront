@@ -192,7 +192,7 @@ class Register extends Component {
             <option value={2}> 一般般</option>
             <option value={3}> 比较爱听音乐</option>
             <option value={4}> 非常爱听音乐</option>
-            <option value={4}> 某种音乐的狂热爱好者</option>
+            <option value={5}> 某种音乐的狂热爱好者</option>
           </select>
           <button className="button" onClick={() => this.handleSubmit()}>注册</button>
         </form>
