@@ -22,17 +22,19 @@ class App extends Component {
       mname: "",
       murl: "",
       mtype: 0,
-      mid: -1
+      mid: -1,
+      utype: -1
     };
 
   }
 
-  handleLogIn = (name, u_id, exp_num, music_num, v, a, datetime, mname, mid, murl) => {
+  handleLogIn = (name, u_id, exp_num, music_num, utype, v, a, datetime, mname, mid, murl) => {
     //console.log("handleLogIn");
     this.setState({ loggedIn: true });
     this.setState({ name: name });
     this.setState({ exp_num: exp_num });
     this.setState({ u_id: u_id });
+    this.setState({ utype: utype });
     //console.log(datetime);
     this.setState({startDate: new Date(datetime.replace(' ','T') + 'Z')});
     var date = new Date(datetime.replace(' ','T') + 'Z');
