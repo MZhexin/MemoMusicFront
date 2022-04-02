@@ -67,7 +67,7 @@ class App extends Component {
     return (
       <div className="app">
         <NavBar handleLogOut={this.handleLogOut} loggedIn={this.state.loggedIn} name={this.state.name} />
-        <Content handleLogOut={this.handleLogOut} handleLogIn={this.handleLogIn} loggedIn={this.state.loggedIn} expNum={this.state.exp_num} uId={this.state.u_id} musicNum={this.state.music_num} v={this.state.v} a={this.state.a} startDate={this.state.startDate} endDate={this.state.endDate} murl={this.state.murl} mid={this.state.mid} mname={this.state.mname}/>
+        <Content handleLogOut={this.handleLogOut} handleLogIn={this.handleLogIn} loggedIn={this.state.loggedIn} expNum={this.state.exp_num} uId={this.state.u_id} utype={this.state.utype} musicNum={this.state.music_num} v={this.state.v} a={this.state.a} startDate={this.state.startDate} endDate={this.state.endDate} murl={this.state.murl} mid={this.state.mid} mname={this.state.mname}/>
       </div>
     );
   }
