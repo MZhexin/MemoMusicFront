@@ -245,14 +245,14 @@ class Home extends Component {
         <div className="mainPage">
         <div className="introclass">
           <p className='sTitle'>实验入口</p>
-          {this.props.expNum <= 5 &&
+          {this.props.expNum <= 3 &&
           <p className="intro">
               本实验旨在测试音乐对人情绪的影响。<br/>
-              实验将分为<span className="numOfTest">5</span> 轮进行，
+              实验将分为<span className="numOfTest">3</span> 轮进行，
               {this.state.width >=600 && <br/>}
               我们希望您在<span className="numOfTest">1</span> 天之中完成不多于<span className="numOfTest">2</span> 轮实验，{this.state.width >=600 && <br/>}
               请尽量选择有不同情绪时进行试验，
-              并在<span className="numOfTest">3</span> 天之内完成所有<span className="numOfTest">5</span>轮实验。<br/>
+              并在<span className="numOfTest">3</span> 天之内完成所有<span className="numOfTest">3</span>轮实验。<br/>
               每<span className="numOfTest">1</span> 轮实验开始前我们都将请您输入您当下的情绪数据（采用<Link to="/faq">V-A模型</Link>），{this.state.width >=600 && <br/>}
               之后您将听到<span className="numOfTest">4</span> 段不同的轻音乐。<br/>
               如果音乐唤起了您的部分记忆或情绪，{this.state.width >=600 && <br/>}
@@ -273,15 +273,15 @@ class Home extends Component {
 
             这是您的第<span className="numOfTest">{this.props.expNum}</span>轮实验</p>
           }
-          {this.props.expNum > 5 &&
+          {this.props.expNum > 3 &&
             <p  className="intro">您已完成所有实验，我们衷心感谢您的支持与帮助！</p>
           }
 
           <div>
-          {this.props.expNum <= 5 &&
+          {this.props.expNum <= 3 &&
             <Button className="testButtonDisplay" onClick={() => this.startTest()}>开始实验</Button>
           }
-          {this.props.expNum > 5 &&
+          {this.props.expNum > 3 &&
             <Button className="testButtonDisplay" onClick={() => this.props.handleLogOut()}>退出登录</Button>
           }
           </div>
@@ -294,7 +294,7 @@ class Home extends Component {
         <div className="mainPage">
           <div className="introclass">
             <p className='sTitle'>恭喜您，完成本轮实验</p>
-            <p className='hint'>当前实验进度为 {this.props.expNum} / 5， <br /><br />请于{isNaN(this.props.endDate.getMonth()) ? this.state.newDate.getMonth() + 1 : this.props.endDate.getMonth() + 1}月{isNaN(this.props.endDate.getDate()) ? this.state.newDate.getDate() : this.props.endDate.getDate()}日之前完成剩余部分</p>
+            <p className='hint'>当前实验进度为 {this.props.expNum} / 3， <br /><br />请于{isNaN(this.props.endDate.getMonth()) ? this.state.newDate.getMonth() + 1 : this.props.endDate.getMonth() + 1}月{isNaN(this.props.endDate.getDate()) ? this.state.newDate.getDate() : this.props.endDate.getDate()}日之前完成剩余部分</p>
             <div style={{display: "block"}}>
               {this.state.favorite === 0 &&
                 <p className="hint" style={{marginBottom: "0px", paddingBottom: "0px", display: "inline", color: "#dd0000"}}>请选择本轮您最满意的音乐：</p>
