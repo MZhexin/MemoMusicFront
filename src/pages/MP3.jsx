@@ -93,7 +93,7 @@ class MP3 extends Component {
         <img src={CD} width={this.state.imgWidth - 40} alt="a black CD"/>
         
         <br />
-            <MidiPlayer src={this.props.url}/>
+             <MidiPlayer src={this.props.url}/>
         <br />
         <InputGroup variant="dark">
           <InputGroup.Prepend>
